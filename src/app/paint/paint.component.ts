@@ -18,6 +18,8 @@ export class PaintComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.ctx = this.canvasRef.nativeElement.getContext('2d');
     if (this.ctx) {
+      this.ctx.canvas.width = window.innerWidth;
+      this.ctx.canvas.height = window.innerHeight - 90;
       this.ctx.lineWidth = 2;
       this.ctx.lineCap = 'round';
       this.ctx.strokeStyle = 'black';

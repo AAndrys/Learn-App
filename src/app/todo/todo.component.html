@@ -1,4 +1,4 @@
-<div>
+<div class="todo-wrapper">
   <h2>Todo List</h2>
   <input
     type="text"
@@ -9,7 +9,12 @@
   <ul>
     <li *ngFor="let todo of todos; let i = index">
       <span [class.completed]="todo.completed">{{ todo.title }}</span>
-      <button (click)="removeTodo(i)">Remove</button>
+      <div>
+        <button *ngIf="!todo.completed" (click)="completedTodo(i)">
+          Completed
+        </button>
+        <button (click)="removeTodo(i)">Remove</button>
+      </div>
     </li>
   </ul>
 </div>

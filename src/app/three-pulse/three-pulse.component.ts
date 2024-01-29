@@ -83,8 +83,6 @@ export class ThreePulseComponent implements OnInit, OnDestroy {
   }
 
   renderShaderBlock() {
-    // const texture = this.textureLoader.load('assets/particles/scorch_01.png');
-
     const geometry = new THREE.PlaneGeometry(256, 256, 256, 256);
 
     const geometry1 = new THREE.PlaneGeometry(2, 2, 2, 2);
@@ -110,7 +108,6 @@ export class ThreePulseComponent implements OnInit, OnDestroy {
           value: new THREE.Vector2(),
         },
       },
-      // transparent: true,
       wireframe: true,
     });
 

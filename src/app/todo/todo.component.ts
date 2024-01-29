@@ -25,6 +25,11 @@ export class TodoComponent {
     }
   }
 
+  completedTodo(index: number) {
+    const todo = this.todos[index];
+    this.todos[index] = { ...todo, completed: true };
+  }
+
   removeTodo(index: number) {
     this.todos.splice(index, 1);
   }
